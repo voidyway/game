@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dd8sxb5pe8rh5"
+path="res://.godot/imported/MetalSteps_05.wav-f55b5424472b7e922ca8e17042acbcbe.sample"
+
+[deps]
+
+source_file="res://Assets/Footsteps Mini Sound Pack/MetalSteps_05.wav"
+dest_files=["res://.godot/imported/MetalSteps_05.wav-f55b5424472b7e922ca8e17042acbcbe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

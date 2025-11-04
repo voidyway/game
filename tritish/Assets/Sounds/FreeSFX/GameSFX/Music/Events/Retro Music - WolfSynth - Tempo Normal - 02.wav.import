@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k7rlany5x72e"
+path="res://.godot/imported/Retro Music - WolfSynth - Tempo Normal - 02.wav-019963e8e04a69df67de64a8bd5c082b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/FreeSFX/GameSFX/Music/Events/Retro Music - WolfSynth - Tempo Normal - 02.wav"
+dest_files=["res://.godot/imported/Retro Music - WolfSynth - Tempo Normal - 02.wav-019963e8e04a69df67de64a8bd5c082b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

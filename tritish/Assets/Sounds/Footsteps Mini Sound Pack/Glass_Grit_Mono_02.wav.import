@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cf4hd4t133sgf"
+path="res://.godot/imported/Glass_Grit_Mono_02.wav-1ff7e51b1f4fe1588956b6c313ee3420.sample"
+
+[deps]
+
+source_file="res://Assets/Footsteps Mini Sound Pack/Glass_Grit_Mono_02.wav"
+dest_files=["res://.godot/imported/Glass_Grit_Mono_02.wav-1ff7e51b1f4fe1588956b6c313ee3420.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

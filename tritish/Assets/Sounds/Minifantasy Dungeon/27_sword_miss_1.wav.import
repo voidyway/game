@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgcqxyrs7otm8"
+path="res://.godot/imported/27_sword_miss_1.wav-9a8234ca9d52063de6e49d6df5d001a0.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Minifantasy Dungeon/27_sword_miss_1.wav"
+dest_files=["res://.godot/imported/27_sword_miss_1.wav-9a8234ca9d52063de6e49d6df5d001a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

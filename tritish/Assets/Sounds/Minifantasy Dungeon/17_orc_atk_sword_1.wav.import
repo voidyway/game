@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dohhlna43iy6t"
+path="res://.godot/imported/17_orc_atk_sword_1.wav-7ab74062d1c3fd6bc1e3c79ca4d7fb29.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Minifantasy Dungeon/17_orc_atk_sword_1.wav"
+dest_files=["res://.godot/imported/17_orc_atk_sword_1.wav-7ab74062d1c3fd6bc1e3c79ca4d7fb29.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

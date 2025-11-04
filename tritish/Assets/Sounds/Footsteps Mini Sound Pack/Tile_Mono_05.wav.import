@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://urdnp5afkh3i"
+path="res://.godot/imported/Tile_Mono_05.wav-2b3ecc7ba13ffb273897ab07b812db61.sample"
+
+[deps]
+
+source_file="res://Assets/Footsteps Mini Sound Pack/Tile_Mono_05.wav"
+dest_files=["res://.godot/imported/Tile_Mono_05.wav-2b3ecc7ba13ffb273897ab07b812db61.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

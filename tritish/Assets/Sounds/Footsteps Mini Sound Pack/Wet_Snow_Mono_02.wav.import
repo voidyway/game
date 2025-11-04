@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0rvmdwttubip"
+path="res://.godot/imported/Wet_Snow_Mono_02.wav-5909fa4eb870eadbeae45d2c9f804906.sample"
+
+[deps]
+
+source_file="res://Assets/Footsteps Mini Sound Pack/Wet_Snow_Mono_02.wav"
+dest_files=["res://.godot/imported/Wet_Snow_Mono_02.wav-5909fa4eb870eadbeae45d2c9f804906.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
