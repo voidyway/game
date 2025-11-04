@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yk0o1mot8mtq"
+path="res://.godot/imported/13_human_jump_land_1.wav-1eebc9d08f86d6c652b95174f5d22e2b.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Minifantasy Dungeon/13_human_jump_land_1.wav"
+dest_files=["res://.godot/imported/13_human_jump_land_1.wav-1eebc9d08f86d6c652b95174f5d22e2b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

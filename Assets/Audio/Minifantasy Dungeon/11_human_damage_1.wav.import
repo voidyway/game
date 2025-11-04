@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lctwrkmlkpvt"
+path="res://.godot/imported/11_human_damage_1.wav-b13086fb2f14a297c74ae5aee0cbb9da.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Minifantasy Dungeon/11_human_damage_1.wav"
+dest_files=["res://.godot/imported/11_human_damage_1.wav-b13086fb2f14a297c74ae5aee0cbb9da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

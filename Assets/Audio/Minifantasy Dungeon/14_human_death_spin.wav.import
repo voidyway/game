@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://52euq137hh2k"
+path="res://.godot/imported/14_human_death_spin.wav-8bed0dc3d38fe83025ae70df2fafd62d.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Minifantasy Dungeon/14_human_death_spin.wav"
+dest_files=["res://.godot/imported/14_human_death_spin.wav-8bed0dc3d38fe83025ae70df2fafd62d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

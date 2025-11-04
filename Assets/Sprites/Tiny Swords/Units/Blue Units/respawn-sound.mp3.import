@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co0lxaqda7s6s"
+path="res://.godot/imported/respawn-sound.mp3-e1bf83c22d9c21eb9969f7a181ad4770.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sprites/Tiny Swords/Units/Blue Units/respawn-sound.mp3"
+dest_files=["res://.godot/imported/respawn-sound.mp3-e1bf83c22d9c21eb9969f7a181ad4770.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
