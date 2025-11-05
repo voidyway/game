@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dl4580dxa486m"
+path="res://.godot/imported/Retro Magic 54.wav-1f2df85c7e220519b65d5d8a07879cde.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/FreeSFX/GameSFX/Magic/Retro Magic 54.wav"
+dest_files=["res://.godot/imported/Retro Magic 54.wav-1f2df85c7e220519b65d5d8a07879cde.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

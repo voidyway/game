@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfhd38qhoow2"
+path="res://.godot/imported/SnowSteps_03.wav-609e62886afe92d09f8c32b8e6d178c4.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/SnowSteps_03.wav"
+dest_files=["res://.godot/imported/SnowSteps_03.wav-609e62886afe92d09f8c32b8e6d178c4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

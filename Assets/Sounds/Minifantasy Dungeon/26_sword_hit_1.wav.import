@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyg6vgs547h1q"
+path="res://.godot/imported/26_sword_hit_1.wav-dc4b2e039a017486f3c0f37fe193e13d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Minifantasy Dungeon/26_sword_hit_1.wav"
+dest_files=["res://.godot/imported/26_sword_hit_1.wav-dc4b2e039a017486f3c0f37fe193e13d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

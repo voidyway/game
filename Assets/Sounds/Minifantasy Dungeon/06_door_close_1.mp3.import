@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwn3y8ma3ewov"
+path="res://.godot/imported/06_door_close_1.mp3-21d6acdb05638acca1c1db5f206421e6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Minifantasy Dungeon/06_door_close_1.mp3"
+dest_files=["res://.godot/imported/06_door_close_1.mp3-21d6acdb05638acca1c1db5f206421e6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
