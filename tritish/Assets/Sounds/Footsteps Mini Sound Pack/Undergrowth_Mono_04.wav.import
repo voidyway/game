@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci6y2ldt8teho"
-path="res://.godot/imported/Undergrowth_Mono_04.wav-f417aa8f4490e310b6c7367d8c8b9836.sample"
+path="res://.godot/imported/Undergrowth_Mono_04.wav-d33db03bf1262b3e893eaba381657e66.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Undergrowth_Mono_04.wav"
-dest_files=["res://.godot/imported/Undergrowth_Mono_04.wav-f417aa8f4490e310b6c7367d8c8b9836.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Undergrowth_Mono_04.wav"
+dest_files=["res://.godot/imported/Undergrowth_Mono_04.wav-d33db03bf1262b3e893eaba381657e66.sample"]
 
 [params]
 

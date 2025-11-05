@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dptqalh2edsum"
-path="res://.godot/imported/Flats_Metal_Grate_004.wav-6b1d5c17beaedf6d2fb31ee7393321eb.sample"
+path="res://.godot/imported/Flats_Metal_Grate_004.wav-8b87476a710592bb9d7d048cbca73346.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Flats_Metal_Grate_004.wav"
-dest_files=["res://.godot/imported/Flats_Metal_Grate_004.wav-6b1d5c17beaedf6d2fb31ee7393321eb.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Flats_Metal_Grate_004.wav"
+dest_files=["res://.godot/imported/Flats_Metal_Grate_004.wav-8b87476a710592bb9d7d048cbca73346.sample"]
 
 [params]
 

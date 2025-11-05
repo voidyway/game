@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dtfptox2tslyq"
-path="res://.godot/imported/Rubber_02.wav-49151e7df2b311fc192afca109f419f9.sample"
+path="res://.godot/imported/Rubber_02.wav-3370fba797576eb17e70b75a219190f9.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Rubber_02.wav"
-dest_files=["res://.godot/imported/Rubber_02.wav-49151e7df2b311fc192afca109f419f9.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Rubber_02.wav"
+dest_files=["res://.godot/imported/Rubber_02.wav-3370fba797576eb17e70b75a219190f9.sample"]
 
 [params]
 

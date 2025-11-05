@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://4j27rcma0ef4"
-path="res://.godot/imported/PavementTiles_Mono_01.wav-f8cf9e8e77fe513d10623c3a8486acbf.sample"
+path="res://.godot/imported/PavementTiles_Mono_01.wav-b305b7f22ffd3b9c58de4dc99754418c.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/PavementTiles_Mono_01.wav"
-dest_files=["res://.godot/imported/PavementTiles_Mono_01.wav-f8cf9e8e77fe513d10623c3a8486acbf.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/PavementTiles_Mono_01.wav"
+dest_files=["res://.godot/imported/PavementTiles_Mono_01.wav-b305b7f22ffd3b9c58de4dc99754418c.sample"]
 
 [params]
 

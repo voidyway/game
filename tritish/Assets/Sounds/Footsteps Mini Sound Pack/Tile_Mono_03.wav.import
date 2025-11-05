@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c1iqj1jn61f5o"
-path="res://.godot/imported/Tile_Mono_03.wav-2b8a2cabdf8015d0b6829ba48647adb3.sample"
+path="res://.godot/imported/Tile_Mono_03.wav-884e9fe7757df775aafc1a4754bdcd88.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Tile_Mono_03.wav"
-dest_files=["res://.godot/imported/Tile_Mono_03.wav-2b8a2cabdf8015d0b6829ba48647adb3.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Tile_Mono_03.wav"
+dest_files=["res://.godot/imported/Tile_Mono_03.wav-884e9fe7757df775aafc1a4754bdcd88.sample"]
 
 [params]
 

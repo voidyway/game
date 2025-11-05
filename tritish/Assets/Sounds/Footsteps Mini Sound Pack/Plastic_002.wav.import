@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cctc6x0vpbgmo"
-path="res://.godot/imported/Plastic_002.wav-f0dc1b1eae6429cc739d79d094d1fdb5.sample"
+path="res://.godot/imported/Plastic_002.wav-4a648a38a5fb914350fc906c5ad01a7a.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Plastic_002.wav"
-dest_files=["res://.godot/imported/Plastic_002.wav-f0dc1b1eae6429cc739d79d094d1fdb5.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Plastic_002.wav"
+dest_files=["res://.godot/imported/Plastic_002.wav-4a648a38a5fb914350fc906c5ad01a7a.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ch0lv7fptty6j"
-path="res://.godot/imported/SnowSteps_04.wav-c0760d702ebc34f821f45a9fb59bb732.sample"
+path="res://.godot/imported/SnowSteps_04.wav-3dd059d514ac90aee08a13c8c4d78fd4.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/SnowSteps_04.wav"
-dest_files=["res://.godot/imported/SnowSteps_04.wav-c0760d702ebc34f821f45a9fb59bb732.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/SnowSteps_04.wav"
+dest_files=["res://.godot/imported/SnowSteps_04.wav-3dd059d514ac90aee08a13c8c4d78fd4.sample"]
 
 [params]
 

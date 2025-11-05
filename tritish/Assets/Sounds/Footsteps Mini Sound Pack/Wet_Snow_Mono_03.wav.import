@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://uk34kkhwlcxp"
-path="res://.godot/imported/Wet_Snow_Mono_03.wav-4199b22818ddbe930b586dfb025ddab5.sample"
+path="res://.godot/imported/Wet_Snow_Mono_03.wav-1151c14c3cd380454625be736a1bafc6.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Wet_Snow_Mono_03.wav"
-dest_files=["res://.godot/imported/Wet_Snow_Mono_03.wav-4199b22818ddbe930b586dfb025ddab5.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Wet_Snow_Mono_03.wav"
+dest_files=["res://.godot/imported/Wet_Snow_Mono_03.wav-1151c14c3cd380454625be736a1bafc6.sample"]
 
 [params]
 

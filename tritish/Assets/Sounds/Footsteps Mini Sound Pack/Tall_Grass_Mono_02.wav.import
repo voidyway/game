@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bo4m1vdn13r2q"
-path="res://.godot/imported/Tall_Grass_Mono_02.wav-6af6fa009c3112fd11c260d721ca7af8.sample"
+path="res://.godot/imported/Tall_Grass_Mono_02.wav-512bd689de6e8ebef56d33d3fb6530f3.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Tall_Grass_Mono_02.wav"
-dest_files=["res://.godot/imported/Tall_Grass_Mono_02.wav-6af6fa009c3112fd11c260d721ca7af8.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Tall_Grass_Mono_02.wav"
+dest_files=["res://.godot/imported/Tall_Grass_Mono_02.wav-512bd689de6e8ebef56d33d3fb6530f3.sample"]
 
 [params]
 

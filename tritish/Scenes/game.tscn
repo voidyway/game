@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c44f3vihyib4b"]
+[gd_scene load_steps=22 format=4 uid="uid://c44f3vihyib4b"]
 
 [ext_resource type="Texture2D" uid="uid://dx8fbnmu3dpkx" path="res://Assets/Sprites/Sprout Lands/Tilesets/Water.png" id="1_v158k"]
 [ext_resource type="Texture2D" uid="uid://cdw1s3iqsypfe" path="res://Assets/Sprites/Sprout Lands/Tilesets/Tilled_Dirt_v2.png" id="2_h4fw4"]
@@ -401,6 +401,9 @@ texture = ExtResource("6_rfjv2")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_22asu")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4fw4"]
+size = Vector2(349.4668, 29.25)
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -412,5 +415,27 @@ tile_map_data = PackedByteArray("AAAAACEAAAABAAAAAAABACEAAAACAAMAAAACACEAAAACAAM
 tile_set = SubResource("TileSet_fkdbe")
 
 [node name="Player" parent="TileMapLayer" instance=ExtResource("9_h4fw4")]
-position = Vector2(107, 590)
+position = Vector2(224, 579)
 scale = Vector2(1, 1.0043399)
+
+[node name="Border" type="StaticBody2D" parent="."]
+
+[node name="Bottom" type="CollisionShape2D" parent="Border"]
+position = Vector2(176, 662)
+shape = SubResource("RectangleShape2D_h4fw4")
+
+[node name="Top" type="CollisionShape2D" parent="Border"]
+position = Vector2(177, 503)
+shape = SubResource("RectangleShape2D_h4fw4")
+
+[node name="Right" type="CollisionShape2D" parent="Border"]
+position = Vector2(362.00003, 595.8701)
+rotation = 1.5707963
+scale = Vector2(0.48719886, 0.7310547)
+shape = SubResource("RectangleShape2D_h4fw4")
+
+[node name="Left" type="CollisionShape2D" parent="Border"]
+position = Vector2(-6.0000305, 605)
+rotation = -1.5707966
+scale = Vector2(0.5173628, 0.534441)
+shape = SubResource("RectangleShape2D_h4fw4")

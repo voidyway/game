@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://biw12wv3exqjs"
-path="res://.godot/imported/LowMetal_Mono_04.wav-f4a6702e463a67d03e88e1d6868b2974.sample"
+path="res://.godot/imported/LowMetal_Mono_04.wav-e05df8364f6ed1e92d88691dd5e73855.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/LowMetal_Mono_04.wav"
-dest_files=["res://.godot/imported/LowMetal_Mono_04.wav-f4a6702e463a67d03e88e1d6868b2974.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/LowMetal_Mono_04.wav"
+dest_files=["res://.godot/imported/LowMetal_Mono_04.wav-e05df8364f6ed1e92d88691dd5e73855.sample"]
 
 [params]
 

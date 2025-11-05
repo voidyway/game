@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cf4hd4t133sgf"
-path="res://.godot/imported/Glass_Grit_Mono_02.wav-1ff7e51b1f4fe1588956b6c313ee3420.sample"
+path="res://.godot/imported/Glass_Grit_Mono_02.wav-0cbe1c3ab3c96b5d5ff809fcb372cdc2.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Glass_Grit_Mono_02.wav"
-dest_files=["res://.godot/imported/Glass_Grit_Mono_02.wav-1ff7e51b1f4fe1588956b6c313ee3420.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Glass_Grit_Mono_02.wav"
+dest_files=["res://.godot/imported/Glass_Grit_Mono_02.wav-0cbe1c3ab3c96b5d5ff809fcb372cdc2.sample"]
 
 [params]
 

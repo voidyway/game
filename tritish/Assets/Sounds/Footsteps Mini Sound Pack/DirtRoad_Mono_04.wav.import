@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b01b71ank1bds"
-path="res://.godot/imported/DirtRoad_Mono_04.wav-a880bf4e8d2921abd587d07ccfd5360b.sample"
+path="res://.godot/imported/DirtRoad_Mono_04.wav-dd27ca39707058a8d81ebf23f70a3cb6.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/DirtRoad_Mono_04.wav"
-dest_files=["res://.godot/imported/DirtRoad_Mono_04.wav-a880bf4e8d2921abd587d07ccfd5360b.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/DirtRoad_Mono_04.wav"
+dest_files=["res://.godot/imported/DirtRoad_Mono_04.wav-dd27ca39707058a8d81ebf23f70a3cb6.sample"]
 
 [params]
 

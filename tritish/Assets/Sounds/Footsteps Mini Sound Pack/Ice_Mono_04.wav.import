@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://o8x6agwygkel"
-path="res://.godot/imported/Ice_Mono_04.wav-3f932ecb9101ef366a8bb296f0d03546.sample"
+path="res://.godot/imported/Ice_Mono_04.wav-c653bf7f6e3fd22f30a2fc014e75616d.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Ice_Mono_04.wav"
-dest_files=["res://.godot/imported/Ice_Mono_04.wav-3f932ecb9101ef366a8bb296f0d03546.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Ice_Mono_04.wav"
+dest_files=["res://.godot/imported/Ice_Mono_04.wav-c653bf7f6e3fd22f30a2fc014e75616d.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ewbfx0w3wh7t"
-path="res://.godot/imported/Linoleum_Mono_02.wav-8cb59edd2b908c767cc922afa061223c.sample"
+path="res://.godot/imported/Linoleum_Mono_02.wav-fd03c7fdc0d7221e42941d236e51cbc0.sample"
 
 [deps]
 
-source_file="res://Assets/Footsteps Mini Sound Pack/Linoleum_Mono_02.wav"
-dest_files=["res://.godot/imported/Linoleum_Mono_02.wav-8cb59edd2b908c767cc922afa061223c.sample"]
+source_file="res://Assets/Sounds/Footsteps Mini Sound Pack/Linoleum_Mono_02.wav"
+dest_files=["res://.godot/imported/Linoleum_Mono_02.wav-fd03c7fdc0d7221e42941d236e51cbc0.sample"]
 
 [params]
 
