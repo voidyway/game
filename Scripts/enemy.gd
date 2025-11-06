@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var attack_damage = 1
 @export var attack_range = 50
 @export var attack_cooldown = 2.0
+@export var attack_knockback_force = 120  # Add this line
 
 
 var current_health = 5
@@ -48,6 +49,9 @@ func _physics_process(delta):
 	check_line_of_sight()
 	
 	if can_see_player:
+		# Update navigation target
+		nav_agent.target_position = player.global_position
+		
 		var distance_to_player = global_position.distance_to(player.global_position)
 		
 		# Attack if in range
@@ -59,6 +63,7 @@ func _physics_process(delta):
 		sprite.play("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, speed * delta * 5)
 	
+	# Apply movement
 	move_and_slide()
 
 func check_line_of_sight():
@@ -89,20 +94,17 @@ func check_line_of_sight():
 		can_see_player = false
 
 func chase_player():
-	if nav_agent.is_navigation_finished():
-		return
-	
-	var next_position = nav_agent.get_next_path_position()
-	var direction = (next_position - global_position).normalized()
-	
-	velocity = direction * chase_speed
-	
-	sprite.play("run")
-	
-	if direction.x < 0:
-		sprite.flip_h = true
-	elif direction.x > 0:
-		sprite.flip_h = false
+	if not nav_agent.is_navigation_finished():
+		var next_pos = nav_agent.get_next_path_position()
+		var direction = global_position.direction_to(next_pos)
+		velocity = direction * chase_speed
+		
+		# Update animations based on movement direction
+		if abs(direction.x) > abs(direction.y):
+			sprite.play("run")
+			sprite.flip_h = direction.x < 0
+		else:
+			sprite.play("run")
 
 func attack_player():
 	if player == null or not can_attack:
@@ -110,6 +112,10 @@ func attack_player():
 	
 	can_attack = false
 	velocity = Vector2.ZERO
+	
+	# Calculate knockback direction (away from player)
+	var attack_dir = (player.global_position - global_position).normalized()
+	knockback_velocity = -attack_dir * attack_knockback_force
 	
 	# Play attack animation if you have one
 	sprite.play("idle")  # Change to "attack" if you have attack animation
@@ -151,19 +157,21 @@ func die():
 		$Hurtbox/CollisionShape2D.disabled = true
 	
 	# Play death animation
-	if $AnimatedSprite2D.sprite_frames.has_animation("death"):
-		$AnimatedSprite2D.play("death")
-		await $AnimatedSprite2D.animation_finished
+	if sprite.sprite_frames.has_animation("death"):
+		sprite.play("death")
+		await sprite.animation_finished
 	else:
-		# No death animation? Just wait 2 seconds with fade
-		var tween = create_tween()
-		tween.tween_property($AnimatedSprite2D, "modulate:a", 0.0, 2.0)
-		await get_tree().create_timer(2.0).timeout
+		# No death animation? Wait a moment
+		await get_tree().create_timer(0.3).timeout
 	
-	# Vanish
+	# VANISHING EFFECT - Fade out in 0.5 seconds
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate:a", 0.0, 0.5)
+	await tween.finished
+	
+	# Now vanish
 	queue_free()
 
 func _on_chase_timer_timeout():
 	if is_chasing and player != null:
 		nav_agent.target_position = player.global_position
-		

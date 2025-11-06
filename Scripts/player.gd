@@ -111,8 +111,12 @@ func _on_attack_hit(body):
 			var knockback_dir = (body.global_position - global_position).normalized()
 			body.take_damage(attack_damage, knockback_dir)
 
-func take_damage(amount: int):
+func take_damage(amount: int, knockback_dir: Vector2 = Vector2.ZERO):
 	current_health -= amount
+	
+	# Apply knockback if direction provided
+	if knockback_dir != Vector2.ZERO:
+		velocity = knockback_dir * 200
 	
 	# Show damage number
 	show_damage_number(amount)
@@ -120,6 +124,11 @@ func take_damage(amount: int):
 	# Flash red
 	sprite.modulate = Color.RED
 	await get_tree().create_timer(0.1).timeout
+	
+	# Safety check
+	if not is_instance_valid(self):
+		return
+		
 	sprite.modulate = Color.WHITE
 	
 	if current_health <= 0:
@@ -157,13 +166,38 @@ func die():
 	print("Player died!")
 	# Add death logic here
 
-func heal(amount: int):
-	current_health = min(current_health + amount, max_health)
-	print("Player healed! Health: ", current_health)
-
 func _on_animation_finished():
 	is_attacking = false
 
 func _physics_process(delta: float) -> void:
 	get_input()
 	move_and_slide()
+	
+func heal(amount: int):
+	current_health = min(current_health + amount, max_health)
+	
+	# Show heal number on player
+	var heal_label = Label.new()
+	heal_label.text = "+" + str(amount)
+	heal_label.position = Vector2(-8, -30)
+	heal_label.z_index = 100
+	
+	var font = load("res://Assets/Fonts/Minecraft.ttf")
+	
+	heal_label.add_theme_font_override("font", font)
+	heal_label.add_theme_font_size_override("font_size", 12)
+	heal_label.add_theme_color_override("font_color", Color.GREEN)
+	heal_label.add_theme_color_override("font_outline_color", Color.BLACK)
+	heal_label.add_theme_constant_override("outline_size", 1)
+	
+	heal_label.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	
+	add_child(heal_label)
+	
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(heal_label, "position:y", heal_label.position.y - 20, 0.6)
+	tween.tween_property(heal_label, "modulate:a", 0.0, 0.6)
+	tween.finished.connect(heal_label.queue_free)
+	
+	print("Player healed! Health: ", current_health)
