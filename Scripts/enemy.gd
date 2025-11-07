@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var detection_range = 500
 @export var max_health = 5
 @export var attack_damage = 1
-@export var attack_range = 50
+@export var attack_range = 35
 @export var attack_cooldown = 2.0
 
 
@@ -15,6 +15,8 @@ var can_see_player = false
 var is_chasing = false
 var knockback_velocity = Vector2.ZERO
 var can_attack = true
+var is_dead = false
+var is_stunned = false
 
 @onready var raycast = $RayCast2D
 @onready var nav_agent = $NavigationAgent2D
@@ -35,10 +37,20 @@ func actor_setup():
 		player = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
-	# Apply knockback
+	# Don't process if dead
+	if is_dead:
+		return
+	
+	# Apply knockback (even when stunned)
 	if knockback_velocity.length() > 0:
 		velocity = knockback_velocity
 		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
+		move_and_slide()
+		return
+	
+	# Don't move if stunned
+	if is_stunned:
+		velocity = Vector2.ZERO
 		move_and_slide()
 		return
 	
@@ -51,9 +63,9 @@ func _physics_process(delta):
 		var distance_to_player = global_position.distance_to(player.global_position)
 		
 		# Attack if in range
-		if distance_to_player < attack_range and can_attack:
+		if distance_to_player <= attack_range and can_attack:
 			attack_player()
-		else:
+		elif distance_to_player > attack_range:
 			chase_player()
 	else:
 		sprite.play("idle")
@@ -108,8 +120,17 @@ func attack_player():
 	if player == null or not can_attack:
 		return
 	
+	# Double-check distance before attacking
+	var distance = global_position.distance_to(player.global_position)
+	if distance > attack_range:
+		return
+	
 	can_attack = false
-	velocity = Vector2.ZERO
+	is_stunned = true
+	
+	# Push enemy back slightly to prevent sticking
+	var push_direction = (global_position - player.global_position).normalized()
+	knockback_velocity = push_direction * 100
 	
 	# Play attack animation if you have one
 	sprite.play("idle")  # Change to "attack" if you have attack animation
@@ -118,15 +139,26 @@ func attack_player():
 	if player.has_method("take_damage"):
 		player.take_damage(attack_damage)
 	
+	# Small delay for pushback to apply
+	await get_tree().create_timer(0.1).timeout
+	knockback_velocity = Vector2.ZERO
+	
+	# Stun for remaining 0.4 seconds (total 0.5)
+	await get_tree().create_timer(0.4).timeout
+	is_stunned = false
+	
 	# Cooldown
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
 func take_damage(amount: int, knockback_direction: Vector2):
+	if is_dead:
+		return
+	
 	current_health -= amount
 	
-	# Apply knockback - REDUCED from 300 to 150
-	knockback_velocity = knockback_direction * 150  # Lower = less knockback
+	# Apply knockback
+	knockback_velocity = knockback_direction * 150
 	
 	# Flash red
 	sprite.modulate = Color.RED
@@ -137,6 +169,11 @@ func take_damage(amount: int, knockback_direction: Vector2):
 		die()
 
 func die():
+	if is_dead:
+		return
+	
+	is_dead = true
+	
 	# Stop all behavior
 	set_physics_process(false)
 	can_see_player = false
@@ -150,15 +187,16 @@ func die():
 	if has_node("Hurtbox/CollisionShape2D"):
 		$Hurtbox/CollisionShape2D.disabled = true
 	
-	# Play death animation
-	if $AnimatedSprite2D.sprite_frames.has_animation("death"):
-		$AnimatedSprite2D.play("death")
-		await $AnimatedSprite2D.animation_finished
-	else:
-		# No death animation? Just wait 2 seconds with fade
-		var tween = create_tween()
-		tween.tween_property($AnimatedSprite2D, "modulate:a", 0.0, 2.0)
-		await get_tree().create_timer(2.0).timeout
+	# Play death animation if it exists
+	if sprite.sprite_frames.has_animation("death"):
+		sprite.play("death")
+		# Wait for animation to finish
+		await sprite.animation_finished
+	
+	# Fade out effect (0.5 seconds from full opacity to invisible)
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate:a", 0.0, 0.5)
+	await tween.finished
 	
 	# Vanish
 	queue_free()
@@ -166,4 +204,3 @@ func die():
 func _on_chase_timer_timeout():
 	if is_chasing and player != null:
 		nav_agent.target_position = player.global_position
-		

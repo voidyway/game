@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://35dop4jifnah"]
+
+[ext_resource type="Texture2D" uid="uid://bsx84gq5cvgvb" path="res://Assets/Sprites/World of Solaria Demo Pack Update 04/RPG Maker/characters/!Chest.png" id="1_lyb87"]
+[ext_resource type="Script" uid="uid://d2wct1ayaiklj" path="res://Scenes/chest.gd" id="2_cjfl1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyb87"]
+atlas = ExtResource("1_lyb87")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjfl1"]
+atlas = ExtResource("1_lyb87")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bagqn"]
+atlas = ExtResource("1_lyb87")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmguq"]
+atlas = ExtResource("1_lyb87")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dq33m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyb87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjfl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bagqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmguq")
+}],
+"loop": true,
+"name": &"chest_open",
+"speed": 120.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyb87"]
+size = Vector2(48, 14.5)
+
+[node name="chest" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_dq33m")
+animation = &"chest_open"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_cjfl1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -16.25)
+shape = SubResource("RectangleShape2D_lyb87")

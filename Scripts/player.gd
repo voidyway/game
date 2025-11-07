@@ -128,15 +128,15 @@ func take_damage(amount: int):
 func show_damage_number(damage: int):
 	var damage_label = Label.new()
 	damage_label.text = "-" + str(damage)
-	damage_label.position = Vector2(-4, -25)  # Closer position
+	damage_label.position = Vector2(-4, -20)  # Just above player
 	damage_label.z_index = 100
 	
 	# Load Minecraft font
-	var font = load("res://Assets/Fonts/Minecraft.ttf")  # Change to your filename!
+	var font = load("res://Assets/Fonts/Minecraft.ttf")
 	
 	# Pixel-perfect settings
 	damage_label.add_theme_font_override("font", font)
-	damage_label.add_theme_font_size_override("font_size", 10)  # Smaller!
+	damage_label.add_theme_font_size_override("font_size", 8)
 	damage_label.add_theme_color_override("font_color", Color.RED)
 	damage_label.add_theme_color_override("font_outline_color", Color.BLACK)
 	damage_label.add_theme_constant_override("outline_size", 1)
@@ -146,11 +146,14 @@ func show_damage_number(damage: int):
 	
 	add_child(damage_label)
 	
-	# Fast animation - less distance, quicker fade
+	# Wait 0.2 seconds before starting animation
+	await get_tree().create_timer(0.1).timeout
+	
+	# Quick animation - small distance, fast fade
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(damage_label, "position:y", damage_label.position.y - 12, 0.4)  # Short distance
-	tween.tween_property(damage_label, "modulate:a", 0.0, 0.4)  # Fast vanish
+	tween.tween_property(damage_label, "position:y", damage_label.position.y - 8, 0.3)  # Small rise
+	tween.tween_property(damage_label, "modulate:a", 0.0, 0.3)  # Quick fade
 	tween.finished.connect(damage_label.queue_free)
 
 func die():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://c44f3vihyib4b"]
+[gd_scene load_steps=27 format=4 uid="uid://c44f3vihyib4b"]
 
 [ext_resource type="Texture2D" uid="uid://dx8fbnmu3dpkx" path="res://Assets/Sprites/Sprout Lands/Tilesets/Water.png" id="1_v158k"]
 [ext_resource type="Texture2D" uid="uid://cdw1s3iqsypfe" path="res://Assets/Sprites/Sprout Lands/Tilesets/Tilled_Dirt_v2.png" id="2_h4fw4"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://m4xj6tccrpcv" path="res://Assets/Sprites/Sprout Lands/Tilesets/Hills.png" id="8_nb51f"]
 [ext_resource type="PackedScene" uid="uid://uc64ykk4st6e" path="res://Scenes/player.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://dg60avwop8fvg" path="res://Scenes/enemy.tscn" id="10_ldgsr"]
+[ext_resource type="Texture2D" uid="uid://b5n5gd6tf5rd4" path="res://Assets/Sprites/Cute Fantasy/Outdoor decoration/Oak_Tree.png" id="11_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://cef20kkw7dxyn" path="res://Scenes/NPCAmelia.tscn" id="13_rfjv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnt18"]
 texture = ExtResource("1_v158k")
@@ -412,6 +414,10 @@ vertices = PackedVector2Array(12.1796875, 636, 12.8203125, 598.59375, 14.78125, 
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 4, 5, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(61, 528, 61, 546, 72, 546, 72, 598, 26, 597, 20, 589, 3, 588, 2, 646, 349, 646, 349, 528)])
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5yvi"]
+radius = 5.0
+height = 24.0
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -423,6 +429,7 @@ tile_map_data = PackedByteArray("AAAAACEAAAABAAAAAAABACEAAAACAAMAAAACACEAAAACAAM
 tile_set = SubResource("TileSet_fkdbe")
 
 [node name="Player" parent="TileMapLayer" instance=ExtResource("9_h4fw4")]
+z_index = 2
 position = Vector2(224, 579)
 scale = Vector2(1, 1.0043399)
 
@@ -453,3 +460,17 @@ navigation_polygon = SubResource("NavigationPolygon_h4fw4")
 
 [node name="Enemy" parent="." instance=ExtResource("10_ldgsr")]
 position = Vector2(107, 591)
+
+[node name="OakTree" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(324, 539)
+texture = ExtResource("11_o5yvi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OakTree"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OakTree/StaticBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_o5yvi")
+
+[node name="Node2D" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(69, 535)
